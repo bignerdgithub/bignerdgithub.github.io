@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-29T09:35:07.635Z</updated>
+  <updated>2017-06-29T10:04:50.163Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yoursite.com/2017/06/29/mypicture/"/>
     <id>http://yoursite.com/2017/06/29/mypicture/</id>
     <published>2017-06-29T04:21:00.000Z</published>
-    <updated>2017-06-29T09:35:07.635Z</updated>
+    <updated>2017-06-29T10:04:50.163Z</updated>
     
     <content type="html"><![CDATA[<p>我的图片墙：<br><a id="more"></a></p>
-<div class="privateMypicture"><br><a href="http://osa5nia8m.bkt.clouddn.com/image/test/test.jpg" alt="picture" target="_blank" rel="external"><img src="http://osa5nia8m.bkt.clouddn.com/image/test/test.jpg"></a><br></div>]]></content>
+<div class="privateMypicture"><br><a href="http://osa5nia8m.bkt.clouddn.com/image/test/test.jpg" target="_blank" rel="external"><img src="http://osa5nia8m.bkt.clouddn.com/image/test/test.jpg" alt=""></a><br><br></div>]]></content>
     
     <summary type="html">
     

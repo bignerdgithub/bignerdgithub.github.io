@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-29T11:57:11.795Z</updated>
+  <updated>2017-06-29T12:03:51.145Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,18 @@
     <link href="http://yoursite.com/2017/06/29/mdGrammar/"/>
     <id>http://yoursite.com/2017/06/29/mdGrammar/</id>
     <published>2017-06-29T11:35:59.000Z</published>
-    <updated>2017-06-29T11:57:11.795Z</updated>
+    <updated>2017-06-29T12:03:51.145Z</updated>
     
     <content type="html"><![CDATA[<p><strong>1.注释</strong></p>
 <blockquote>
 <p>[^_^]: 地址跳转(只对单行有效)</p>
 <p>[comment]: &lt;&gt; (This is a comment, it will not be included)</p>
 <p>[//]: # (This may be the most platform independent comment)</p>
-<p>[//]: &lt;&gt; (This is also a comment.)<br><a id="more"></a><br><strong>2.图片链接</strong><br>[![Alt test][1]][1]</p>
+<p>[//]: &lt;&gt; (This is also a comment.)<br><a id="more"></a></p>
+</blockquote>
+<p><strong>2.图片链接</strong></p>
+<blockquote>
+<p>[![Alt test][1]][1]</p>
 <p>[1]: http:xxxxx    </p>
 </blockquote>
 ]]></content>

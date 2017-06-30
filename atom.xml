@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-29T15:15:14.361Z</updated>
+  <updated>2017-06-30T05:31:23.969Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>music1</title>
+    <link href="http://yoursite.com/2017/06/30/music1/"/>
+    <id>http://yoursite.com/2017/06/30/music1/</id>
+    <published>2017-06-30T05:27:41.000Z</published>
+    <updated>2017-06-30T05:31:23.969Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>老鹰eagle 小红莓 皇后乐队</strong><br><a id="more"></a></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=782499776&auto=1&height=430"></iframe>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;老鹰eagle 小红莓 皇后乐队&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="音乐" scheme="http://yoursite.com/tags/music/"/>
+    
+  </entry>
   
   <entry>
     <title>音乐</title>

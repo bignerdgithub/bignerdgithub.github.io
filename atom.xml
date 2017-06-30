@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-30T06:04:24.186Z</updated>
+  <updated>2017-06-30T06:11:02.738Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,16 @@
     <link href="http://yoursite.com/2017/06/30/videoTest/"/>
     <id>http://yoursite.com/2017/06/30/videoTest/</id>
     <published>2017-06-30T06:00:35.000Z</published>
-    <updated>2017-06-30T06:04:24.186Z</updated>
+    <updated>2017-06-30T06:11:02.738Z</updated>
     
     <content type="html"><![CDATA[<p><strong>视频(秒速五厘米主题曲MV)</strong></p>
-<video width="480" height="320" controls autoplay="autoplay"><br><source src="http://osa5nia8m.bkt.clouddn.com/video/%E5%B1%B1%E5%B4%8E%E3%81%BE%E3%81%95%E3%82%88%E3%81%97%20-%20One%20more%20time,%20One%20more%20chance.mp4"><br></video>
+<video width="480" height="320" controls><br><source src="http://osa5nia8m.bkt.clouddn.com/video/%E5%B1%B1%E5%B4%8E%E3%81%BE%E3%81%95%E3%82%88%E3%81%97%20-%20One%20more%20time,%20One%20more%20chance.mp4"><br></video>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;&lt;strong&gt;视频(秒速五厘米主题曲MV)&lt;/strong&gt;&lt;/p&gt;
-&lt;video width=&quot;480&quot; height=&quot;320&quot; controls autoplay=&quot;autoplay&quot;&gt;&lt;br&gt;&lt;source src=&quot;http://osa5nia8m.bkt.cl
+&lt;video width=&quot;480&quot; height=&quot;320&quot; controls&gt;&lt;br&gt;&lt;source src=&quot;http://osa5nia8m.bkt.clouddn.com/video/%E5%
     
     </summary>
     

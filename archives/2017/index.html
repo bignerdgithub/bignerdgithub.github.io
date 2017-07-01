@@ -815,52 +815,128 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
 <!--我的音乐插件-->
 <script>
 	var flag = 1;
+	var listmusic_flag = 1;
+	var musicname = "Diana Boncheva-Purple Passion";//歌曲名
+	var musicList = "<span onclick=listmusic()>播放列表|</span >";
+	var caozuo = "<span onclick=lastmusic()>上一首|</span ><span onclick=nextmusic()>下一首 </span>";
+	var audio = null;
+	var musicId = 0;//当前的音乐id
+	var musicInfo = [["Diana Boncheva","Purple Passion","http://osa5nia8m.bkt.clouddn.com/mp3/Diana%20Boncheva%20-%20Purple%20Passion.mp3"],
+					["张卫健","孤独不苦","http://osa5nia8m.bkt.clouddn.com/mp3/%E5%BC%A0%E5%8D%AB%E5%81%A5%20-%20%E5%AD%A4%E7%8B%AC%E4%B8%8D%E8%8B%A6.mp3"]];
 	function openMenu(photo){
-		var music = document.getElementById('music');
+		var music = document.getElementById('music');		
 		if(flag == 1){
 			music.style.width= "100%";
 			var h = music.offsetWidth-50;
 			document.getElementById('list').style.cssText = "width:"+h+"px";
 			flag = 0;
-			photo.src = "https://bignerdgithub.github.io/img/musicplugin/4.PNG";
-			
+			photo.src = "https://bignerdgithub.github.io/img/musicplugin/4.PNG";					
 		}else{
 			music.style.width="auto";
-			document.getElementById('list').style.cssText = "width:1px";
+			document.getElementById('list').style.cssText = "width:0px";
 			flag = 1;
-			photo.src = "https://bignerdgithub.github.io/img/musicplugin/3.PNG";
+			photo.src = "https://bignerdgithub.github.io/img/musicplugin/3.PNG";			
 		}
 	}
-
+	//列表播放
+	function listMusicPlay(obj){
+		audio.src = musicInfo[obj.id][2];
+		audio.load();
+		audio.autoplay = "auto";
+		musicId = obj.id;	
+	}
+	//播放列表|
+	function listmusic(){
+		var musiclist = document.getElementById('musiclist');
+		if(listmusic_flag ==1){			
+			var ta = "<table border=1 cellspacing=0 width=100%>";
+			for(var i in musicInfo){
+				var b = i+1;
+				ta += "<tr id="+i+" onclick=listMusicPlay(this) ><td>"+b+"</td><td>"+musicInfo[i][0]+"</td><td>"+musicInfo[i][1]+"</td></tr>";
+				i++;
+			}
+			ta += "</table>";
+			musiclist.innerHTML = ta;
+			listmusic_flag = 0;
+			musicList = "<span onclick=listmusic()>关闭列表|</span >";
+		}else{
+			musiclist.innerHTML = "";
+			listmusic_flag = 1;
+			musicList = "<span onclick=listmusic()>播放列表|</span >";
+		}
+	}
+	//显示音乐时间
+	function showtimes(){		
+		var alltime = Math.round(audio.duration);//音乐总时长
+		var nowtime = Math.round(audio.currentTime);//当前时长
+		var second1 = alltime % 60;
+		var minute1 = Math.floor(alltime / 60);
+		var second2 = nowtime % 60;
+		var minute2 = Math.floor(nowtime / 60);
+		var musictime = minute2+":"+second2+"|"+minute1+":"+second1;	
+		var a = musicInfo[musicId][0]+"--"+musicInfo[musicId][1];
+		document.getElementById('musictime').innerHTML = musicList+caozuo+a+musictime;	
+		if(audio.ended){
+			//播放下一首			
+			nextmusic();
+		}
+	}
+	//上一首
+	function nextmusic(){	
+			if(musicId == 0){
+				musicId = musicInfo.length-1;
+			}else{
+				musicId -= 1;
+			}
+			audio.src = musicInfo[musicId][2];
+			audio.load();
+			audio.autoplay = "auto";		
+	}
+	
+	//下一首
+	function lastmusic(){
+		if(musicId == (musicInfo.length-1)){
+			musicId = 0;
+		}else{
+			musicId += 1;
+		}
+		audio.src = musicInfo[musicId][2];
+		audio.load();
+		audio.autoplay = "auto";			
+	}
+	window.onload=function(){
+		audio = document.getElementById('music1');			
+		var t1 = setInterval(showtimes,1000);
+	}
 	//播放音乐
 	function playMusic(photo){
-		var audio = document.getElementById('music1');
-		if(audio.paused){
+		if(audio.paused){	
 			audio.play();
 			photo.src = "https://bignerdgithub.github.io/img/musicplugin/2.PNG";
 			photo.title = "暂停";
 		}else{
 			audio.pause();
 			photo.src = "https://bignerdgithub.github.io/img/musicplugin/1.PNG";
-			photo.title = "播放";
-		}
-		
+			photo.title = "播放";			
+		}		
 
 	}
 </script>
-	<div id="music" style="position:fixed;bottom:0px;right:0px;height:50px;z-index:1;overflow:hidden;">
-		<div style="width:50px;height:40px;float:right;background:black;cursor:pointer;"><img onclick="playMusic(this)" src="https://bignerdgithub.github.io/img/musicplugin/1.PNG" title="播放"  alt="播放"/></div>
+<div id="music" style="position:fixed;bottom:0px;right:0px;height:50px;z-index:1;overflow:hidden;">
+		<div style="width:50px;height:50px;float:right;background:black;cursor:pointer;"><img onclick="playMusic(this)" src="https://bignerdgithub.github.io/img/musicplugin/1.PNG" title="播放"  alt="播放"/></div>
 		<div style="margin:0;height:50px;background:#eeeeee;float:right;cursor:pointer;">
 			<div id="open" style="width:22px;height:100px;background:black;float:right;cursor:pointer;"><img src="https://bignerdgithub.github.io/img/musicplugin/3.PNG" onclick="openMenu(this)"/></div>
 			<div id="list" style="float:right;height:50px;background:black;width:1px">
-				<div style="width:100%;height:100%;background:black;">
+				<div style="width:100%;height:100%;">
+					<div id="musictime" style="float:right;"></div>
 					<audio id="music1" src="http://osa5nia8m.bkt.clouddn.com/mp3/Diana%20Boncheva%20-%20Purple%20Passion.mp3">
 					</audio>
 				</div>	
 			</div>
 		</div>
-		
-	</div>	
+</div>
+<div id="musiclist" style="width:100%;position:fixed;bottom:50px;right:0px;z-index:1;overflow:auto;background:#eeeeee;">
 	
+</div>	
  </body>
 </html>

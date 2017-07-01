@@ -558,6 +558,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
 	var musicList = "<span onclick=listmusic()>播放列表|</span >";
 	var caozuo = "<span onclick=lastmusic()>上一首|</span ><span onclick=nextmusic()>下一首 </span>";
 	var audio = null;
+	var t1;
 	var musicId = 0;//当前的音乐id
 	var musicInfo = [["Diana Boncheva","Purple Passion","http://osa5nia8m.bkt.clouddn.com/mp3/Diana%20Boncheva%20-%20Purple%20Passion.mp3"],
 					["张卫健","孤独不苦","http://osa5nia8m.bkt.clouddn.com/mp3/%E5%BC%A0%E5%8D%AB%E5%81%A5%20-%20%E5%AD%A4%E7%8B%AC%E4%B8%8D%E8%8B%A6.mp3"]];
@@ -568,12 +569,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
 			var h = music.offsetWidth-50;
 			document.getElementById('list').style.cssText = "width:"+h+"px";
 			flag = 0;
-			photo.src = "https://bignerdgithub.github.io/img/musicplugin/4.PNG";					
+			photo.src = "https://bignerdgithub.github.io/img/musicplugin/4.PNG";
+			t1= setInterval(showtimes,1000);	
 		}else{
 			music.style.width="auto";
 			document.getElementById('list').style.cssText = "width:0px";
 			flag = 1;
-			photo.src = "https://bignerdgithub.github.io/img/musicplugin/3.PNG";			
+			photo.src = "https://bignerdgithub.github.io/img/musicplugin/3.PNG";
+			clearInterval(t1);		
 		}
 	}
 	//列表播放
@@ -587,10 +590,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
 	function listmusic(){
 		var musiclist = document.getElementById('musiclist');
 		if(listmusic_flag ==1){			
-			var ta = "<table border=1 cellspacing=0 width=100%>";
+			var ta = "<table border=1 cellspacing=0 width=100% align=right>";
 			for(var i in musicInfo){
 				var b = i+1;
-				ta += "<tr id="+i+" onclick=listMusicPlay(this) align=right><td>"+b+"</td><td>"+musicInfo[i][0]+"</td><td>"+musicInfo[i][1]+"</td></tr>";
+				ta += "<tr id="+i+" onclick=listMusicPlay(this) title=点击播放 align=right><td>"+b+"</td><td>"+musicInfo[i][0]+"</td><td>"+musicInfo[i][1]+"</td></tr>";
 				i++;
 			}
 			ta += "</table>";
@@ -644,7 +647,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
 	}
 	window.onload=function(){
 		audio = document.getElementById('music1');			
-		var t1 = setInterval(showtimes,1000);
+		
 	}
 	//播放音乐
 	function playMusic(photo){

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/06/28/mygame/</loc>
+    
+    <lastmod>2017-07-01T04:46:42.812Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/06/28/helpcomment/</loc>
+    
+    <lastmod>2017-07-01T04:46:35.232Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/06/30/videoTest/</loc>
     
     <lastmod>2017-06-30T17:34:30.295Z</lastmod>
@@ -19,13 +33,6 @@
     <loc>http://yoursite.com/2017/06/29/messageBoard/</loc>
     
     <lastmod>2017-06-30T03:05:10.577Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/06/28/mygame/</loc>
-    
-    <lastmod>2017-06-29T15:42:25.349Z</lastmod>
     
   </url>
   
@@ -61,13 +68,6 @@
     <loc>http://yoursite.com/2017/06/28/essay-test/</loc>
     
     <lastmod>2017-06-29T11:17:16.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2017/06/28/helpcomment/</loc>
-    
-    <lastmod>2017-06-29T10:32:41.981Z</lastmod>
     
   </url>
   

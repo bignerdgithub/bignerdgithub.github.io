@@ -866,9 +866,9 @@ function playMusic(photo){
 </script>
 
 <div style="position:fixed;bottom:0px;width:100%;height:40px;z-index:10;">
-	<div style="width:4%;height:40px;float:left;background:black;cursor:pointer"><img onclick="playMusic(this)" src="https://bignerdgithub.github.io/img/musicplugin/1.PNG" title="播放"  alt="播放"/></div>
-	<div style="margin:0;height:40px;width:96%;background:#eeeeee;overflow:hidden;float:left;cursor:pointer">
-		<div id="open" style="width:2%;height:100px;background:black;float:left;position:relative;cursor:pointer"><img src="https://bignerdgithub.github.io/img/musicplugin/3.PNG" onclick="openMenu(this)"/></div>
+	<div style="width:4%;height:40px;float:left;background:black;cursor:pointer;z-index:10;"><img onclick="playMusic(this)" src="https://bignerdgithub.github.io/img/musicplugin/1.PNG" title="播放"  alt="播放"/></div>
+	<div style="margin:0;height:40px;width:96%;background:#eeeeee;overflow:hidden;float:left;cursor:pointer;z-index:10;">
+		<div id="open" style="width:2%;height:100px;background:black;float:left;position:relative;cursor:pointer;z-index:10;"><img src="https://bignerdgithub.github.io/img/musicplugin/3.PNG" onclick="openMenu(this)"/></div>
 		<div id="list" name="list" style="float:left;height:40px;width:98%;background:black;right:100%;position:relative ;z-index:10;" >
 			<div style="float:left;width:100%;height:100%;margin:0;padding:0;">
 				<audio id="music1" src="http://osa5nia8m.bkt.clouddn.com/mp3/Diana%20Boncheva%20-%20Purple%20Passion.mp3">
@@ -877,6 +877,7 @@ function playMusic(photo){
 		</div>
 	</div>
 </div>	
+	
 
 
 	

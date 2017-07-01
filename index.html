@@ -1014,5 +1014,71 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
   <!--
  <script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=17973425462810303424' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
 	-->
+	
+	
+<!--我的音乐插件-->
+<script>
+var moveNum = 110; //移动总像素
+var leftNum = 25;  //距左端像素
+var flag = 1;
+function openMenu(photo){
+	if(flag == 1){
+	var y = moveNum;
+	function closelist(){
+	document.getElementById('list').style.right="0px";
+	document.getElementById('open').style.float="right";
+	y--;
+	if(y==leftNum){clearInterval(intv);}
+	}
+	intv=setInterval(closelist,1);
+	flag = 0;
+	photo.src = "https://bignerd.bignerd.io/img/plugin/https://bignerd.bignerd.io/img/plugin/4.png";
+	}else{
+		closeMenu();
+		flag = 1;
+		photo.src = "https://bignerd.bignerd.io/img/plugin/3.png";
+	}
+}
+
+function closeMenu(){
+	var y = leftNum;
+	function showlist(){
+	document.getElementById('list').style.right="100%";
+	document.getElementById('open').style.float="left";
+	y++;
+	if(y==moveNum){clearInterval(intv);}
+	}
+	intv=setInterval(showlist,1);
+}
+//播放音乐
+function playMusic(photo){
+	var audio = document.getElementById('music1');
+	if(audio.paused){
+		audio.play();
+		photo.src = "https://bignerd.bignerd.io/img/plugin/2.png";
+		photo.title = "暂停";
+	}else{
+		audio.pause();
+		photo.src = "https://bignerd.bignerd.io/img/plugin/1.png";
+		photo.title = "播放";
+	}
+	
+
+}
+</script>
+
+<div style="position:fixed;bottom:0px;width:100%;height:40px">
+	<div style="width:4%;height:40px;float:left;background:black;cursor:pointer"><img onclick="playMusic(this)" src="https://bignerd.bignerd.io/img/plugin/1.png" title="播放"  alt="播放"/></div>
+	<div style="margin:0;height:40px;width:96%;background:#eeeeee;overflow:hidden;float:left;cursor:pointer">
+		<div id="open" style="width:2%;height:100px;background:black;float:left;position:relative;cursor:pointer"><img src="https://bignerd.bignerd.io/img/plugin/3.png" onclick="openMenu(this)"/></div>
+		<div id="list" name="list" style="float:left;height:40px;width:98%;background:black;right:100%;position:relative ;z-index:10;" >
+			<div style="float:left;width:100%;height:100%;margin:0;padding:0;">
+				<audio id="music1" src="http://osa5nia8m.bkt.clouddn.com/mp3/Diana%20Boncheva%20-%20Purple%20Passion.mp3">
+				</audio>
+			</div>
+		</div>
+	</div>
+</div>	
+	
  </body>
 </html>

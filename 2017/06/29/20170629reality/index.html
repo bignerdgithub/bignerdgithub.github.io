@@ -690,7 +690,7 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
 		var minute2 = Math.floor(nowtime / 60);
 		var musictime = minute2+":"+second2+"|"+minute1+":"+second1;	
 		var a = musicInfo[musicId][0]+"--"+musicInfo[musicId][1];
-		document.getElementById('musictime').innerHTML = musicList+caozuo+a+musictime;	
+		document.getElementById('musictime').innerHTML = "<table><tr><td>"+musicList+caozuo+musictime+"</td></tr><tr><td>"+a+"</td></tr></table>";	
 		if(audio.ended){
 			//播放下一首			
 			nextmusic();
